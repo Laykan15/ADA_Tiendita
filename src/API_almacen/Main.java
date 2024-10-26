@@ -36,6 +36,8 @@ import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
 import Gen_Code.Codigo;
+import java.awt.Font;
+import java.awt.Color;
 
 public class Main extends JFrame {
 
@@ -73,13 +75,15 @@ public class Main extends JFrame {
      */
     public Main() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(100, 100, 450, 469);
+        setBounds(100, 100, 450, 395);
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
         contentPane.setLayout(null);
+        
 
-        JLabel lblNewLabel = new JLabel("Producto");
+        JLabel lblNewLabel = new JLabel("Producto:");
+        lblNewLabel.setForeground(new Color(255, 255, 255));
         lblNewLabel.setBounds(10, 68, 95, 13);
         contentPane.add(lblNewLabel);
 
@@ -88,6 +92,7 @@ public class Main extends JFrame {
         contentPane.add(comboProducto);
 
         JLabel lblPrecio = new JLabel("Precio:");
+        lblPrecio.setForeground(new Color(255, 255, 255));
         lblPrecio.setBounds(216, 68, 65, 13);
         contentPane.add(lblPrecio);
 
@@ -103,21 +108,11 @@ public class Main extends JFrame {
         textArea.setBounds(59, 91, 147, 147);
         contentPane.add(textArea);
 
-        JLabel lblTitulo = new JLabel("Tiendita");
-        lblTitulo.setBounds(162, 10, 65, 13);
+        JLabel lblTitulo = new JLabel("Tiendita Express");
+        lblTitulo.setForeground(new Color(255, 255, 255));
+        lblTitulo.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD | Font.ITALIC, 30));
+        lblTitulo.setBounds(110, 10, 254, 29);
         contentPane.add(lblTitulo);
-
-        JRadioButton rdblimpieza = new JRadioButton("Limpieza");
-        rdblimpieza.setBounds(10, 29, 103, 21);
-        contentPane.add(rdblimpieza);
-
-        JRadioButton rdbfiesta = new JRadioButton("Fiesta");
-        rdbfiesta.setBounds(141, 29, 103, 21);
-        contentPane.add(rdbfiesta);
-
-        JRadioButton rdbbebes = new JRadioButton("Bebes");
-        rdbbebes.setBounds(261, 29, 103, 21);
-        contentPane.add(rdbbebes);
 
         txtPrecio = new JTextField();
         txtPrecio.setBounds(268, 65, 96, 19);
@@ -130,6 +125,7 @@ public class Main extends JFrame {
         JLabel lblImagen = new JLabel("");
         lblImagen.setBounds(261, 97, 165, 167);
         contentPane.add(lblImagen);
+        
 
         // Acción para seleccionar un producto y mostrar el precio
         comboProducto.addActionListener(new ActionListener() {
@@ -201,6 +197,7 @@ public class Main extends JFrame {
         btnPagar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Carrito de compras:\n" + textArea.getText());
+                
                 try (BufferedWriter flujoSalida = new BufferedWriter(new FileWriter("src/Archivos/Gen_Codi.txt", true))) {
                     flujoSalida.newLine();// Agrega salto de linea, permitiendo la funcion de historial de conpras
                 } catch (IOException e2) {
@@ -225,11 +222,13 @@ public class Main extends JFrame {
                    
                     
                     JPanel panel = new JPanel();
-                    panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS)); // Establecer layout vertical
+                    panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS)); // Establece layout vertical
 
                     
-                    JLabel label2 = new JLabel("<html>" + textArea.getText().replace("\n", "<br><br>") + "</html>"); 
+                    JLabel label2 = new JLabel("<html>" + textArea.getText().replace("\n", "<br><br>") + "</html>"); //reemplaza por saltos br
                     panel.add(label2);
+                    
+                    textArea.setText("");//limpia el area seguir sin cerrar
 
                     // Agregar una imagen a un JLabel
                     try {
@@ -254,8 +253,13 @@ public class Main extends JFrame {
                 
             }
         });
+        JLabel lblFondo = new JLabel("");
+        lblFondo.setBounds(0, 0, 447, 372);
+        contentPane.add(lblFondo);
+        ImageIcon icono = new ImageIcon("src/imagenes/Fondo.jpg");
+        lblFondo.setIcon(icono);
     }
-
+    
     // Método para cargar los productos desde el archivo y llenar el JComboBox
     private void cargarProductos(JComboBox<String> comboProducto) {
         String Almacen = "src/Archivos/Almacen.txt"; // Ruta del archivo
@@ -281,6 +285,7 @@ public class Main extends JFrame {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        
     }
 }
 
