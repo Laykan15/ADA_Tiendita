@@ -1,0 +1,19 @@
+Productos 	, Categoría , Precio
+Jabón 	  	, Limpieza  , 14 
+Shampo 	  	, Limpieza  , 50 
+Fabuloso  	, Limpieza  , 35
+Cloro	  	, Limpieza  , 30
+Trapeador 	, Limpieza  , 65
+Escoba 	  	, Limpieza  , 50
+Chetosfuego	, Fiesta    , 15
+churrumais	, Fiesta    , 10 
+Palomitas	, Fiesta    , 15 
+DrPpeper 	, Fiesta    , 18 
+Cocacola  	, Fiesta    , 30 
+Dip de queso 	, Fiesta    , 50 
+Dip de espinaca , Fiesta    , 50 
+Pañales		, Bebé	    , 150
+Leche en polvo	, Bebé	    , 400 
+Formula 	, Bebé      , 300
+Biberones 	, Bebé      , 100
+Toallita humeda , Bebé      , 50

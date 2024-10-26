@@ -2,13 +2,15 @@
 public class Producto {
 	String nombre;
 	String categoria;
-	int cantidad;
+	double precio;
 	
-	public Producto(String nombre, String categoria, int cantidad) {
+	public Producto(String nombre, String categoria, double precio) {
 		this.nombre = nombre;
 		this.categoria = categoria;
-		this.cantidad = cantidad;
+		this.precio = precio;
 	}
+
+	
 
 	public String getNombre() {
 		return nombre;
@@ -26,12 +28,12 @@ public class Producto {
 		this.categoria = categoria;
 	}
 
-	public int getCantidad() {
-		return cantidad;
+	public double getPrecio() {
+		return precio;
 	}
 
-	public void setCantidad(int cantidad) {
-		this.cantidad = cantidad;
+	public void setPrecio(double precio) {
+		this.precio = precio;
 	}
 	
 }
