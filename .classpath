@@ -13,7 +13,10 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="C:/Users/layka/Downloads/API_almacen.jar"/>
 	<classpathentry kind="lib" path="C:/Users/layka/Downloads/Code_Bar.jar"/>
+HEAD
 	<classpathentry kind="lib" path="C:/Users/Oscar Torres Ramirez/Desktop/API_almacen2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Oscar Torres Ramirez/Desktop/Code_Bar.jar"/>
+
+ c2f33f84be52d9a3e11de11b1b94c976dbd04eae
 	<classpathentry kind="output" path="bin"/>
 </classpath>
