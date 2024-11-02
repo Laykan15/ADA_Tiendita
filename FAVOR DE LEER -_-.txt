@@ -1,0 +1,4 @@
+Hola mtra Dania esto es lo que nos solicito, estoy añadiendo los jar pero en mi maquina me marca un error de versión del compilador por si a usted también le aparece, al importar las librerías en mi computadora y correr el proyecto esta sin fallas solo lo de las versiones, se lo anexo en la siguiente linea un jar esta renombrado pero no se le modifico nada, estamos al pendiente de sus observaciones, lindo fin de semana 
+
+Error: Se ha producido un error de enlace al cargar la clase principal API_almacen.Main 	java.lang.UnsupportedClassVersionError: API_almacen/Main has been compiled by a more recent version of the Java Runtime (class file version 66.0), this version of the Java Runtime only recognizes class file versions up to 61.0
+
